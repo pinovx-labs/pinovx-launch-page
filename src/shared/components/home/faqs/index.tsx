@@ -5,7 +5,7 @@ import { faqs } from "../../../../../public/assets/data/faqs";
 
 const Faqs = () => {
   return (
-    <main className="w-full mt-y ">
+    <main className="w-full mt-10  border border-yellow-500 ">
       <section className="container mx-auto px-4 ">
         <div className="w-full flex flex-col md:flex-row  ">
           <div className="w-full md:w-4/12 flex-cols  gap-6">

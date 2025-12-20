@@ -17,7 +17,7 @@ const DifferentCard = () => {
         />
       </div>
 
-      <div className="w-7/12 flex flex-wrap justify-end  ">
+      <div className="w-full md:w-7/12 flex flex-wrap justify-end border border-blue-800  ">
         {different.map((item, index) => (
           <Card
             key={index}

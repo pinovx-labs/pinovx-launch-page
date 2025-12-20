@@ -22,7 +22,7 @@ const TestimonialsSection = () => {
   const nextRef = React.useRef<HTMLDivElement>(null);
 
   return (
-    <main className="w-full my-8 bg-[#F2FDF3]">
+    <main className="w-full mt-10 bg-[#F2FDF3]   border border-yellow-500">
       <section className="container mx-auto px-4 bg-[#F2FDF3]">
         <div className="w-full flex flex-col py-8 md:flex-row">
           {/* Left Section with Title and Navigation */}

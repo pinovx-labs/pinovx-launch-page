@@ -3,6 +3,7 @@ import "./globals.css";
 import Providers from "./providers";
 import { inter, montserrat, geist, roboto } from "./fonts";
 import Footer from "@/shared/components/footer/Footer";
+import Header from "@/shared/components/header/header";
 
 export const metadata: Metadata = {
   title: "E-commerce Multi Vendor Seller Ui",
@@ -25,7 +26,10 @@ export default function RootLayout({
           ${geist}
         `}
       >
-        <Providers>{children}
+        <Providers>
+          
+          <Header/>
+          {children}
 
           <Footer/>
         </Providers>
