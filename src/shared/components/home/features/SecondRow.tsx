@@ -1,5 +1,4 @@
-"use client"
-
+"use client";
 
 import { featureBuyCrypto, featureTransaction } from "@/utils/externalMedia";
 import { CirclePlus } from "lucide-react";
@@ -20,10 +19,7 @@ export const SecondRow = () => {
     >
       <div className="w-full md:w-7/12  flex flex-col gap-2 md:gap-8 relative bg-[#F2FDF3] h-[500px] justify-between  ">
         <div className="flex flex-col  mt-2  md:mt-8 items-start justify-between gap-5 p-10 ">
-          <motion.div
-            variants={fadeInUp}
-            className="flex flex-col  gap-5  "
-          >
+          <motion.div variants={fadeInUp} className="flex flex-col  gap-5  ">
             <h3 className="text-[#02CE13]   font-geist  font-bold  text-2xl md:text-3xl ">
               View Rates{" "}
             </h3>
@@ -46,18 +42,25 @@ export const SecondRow = () => {
 
         <motion.div
           variants={fadeInScale}
-          className="flex items-center justify-center md:absolute md:right-0 md:bottom-0 z-10"
+          className="
+    relative 
+    h-[150px] 
+    md:h-[299px]
+    md:w-[277px]
+    w-full
+    flex 
+    items-center 
+    justify-center 
+    md:absolute md:right-0 md:-bottom-8 
+    z-10
+  "
         >
           <Image
             src={featureTransaction}
             alt="send-money-icon"
-            width={364}
-            height={310}
-            className="md:h-[310px] md:w-auto"
-            style={{
-              height: "190px",
-              width: "auto",
-            }}
+            fill
+            className="object-contain"
+            priority
           />
         </motion.div>
       </div>
@@ -69,10 +72,7 @@ export const SecondRow = () => {
         }}
       >
         <div className="flex flex-col mt-2  md:mt-8 items-start justify-between gap-5 p-10 ">
-          <motion.div
-            variants={fadeInUp}
-            className="flex flex-col  gap-5  "
-          >
+          <motion.div variants={fadeInUp} className="flex flex-col  gap-5  ">
             <h3 className="text-white   font-geist  font-bold  text-2xl md:text-3xl ">
               Crypto Access{" "}
             </h3>
@@ -97,13 +97,16 @@ export const SecondRow = () => {
     relative 
     h-[150px] 
     md:h-[299px]
-    md:w-[277px]
+    md:w-[220px]
     w-full
     flex 
     items-center 
     justify-center 
-    md:absolute md:right-0 md:bottom-0 
-    z-10
+    md:justify-end
+    md:items-end
+    md:absolute md:right-0 md:-bottom-8
+    z-10 
+
   "
         >
           <Image

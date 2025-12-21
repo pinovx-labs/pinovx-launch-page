@@ -7,7 +7,7 @@ import { fadeInScale, fadeInUp, staggerContainer } from "@/utils/animation";
 export default function HeroSection() {
   return (
     <main className="w-full  bg-white   mt-14 ">
-      <section className="relative w-full ">
+      <section className="relative w-full "  id="home">
         {/* White space above for content that shoots out */}
 
         {/* Gradient Background */}
@@ -56,7 +56,7 @@ export default function HeroSection() {
                   <input
                     type="email"
                     placeholder="Enter email address"
-                    className="w-full md:w-[380px]  rounded-lg  p-4 bg-white/95 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500"
+                    className="w-full md:w-[380px]  rounded-lg   py-2.5 px-4 bg-white/95 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500"
                   />
                   <Button
                     text="Join Our Waitlist"

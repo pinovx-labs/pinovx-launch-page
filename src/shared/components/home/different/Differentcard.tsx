@@ -32,7 +32,7 @@ const DifferentCard = () => {
         />
       </motion.div>
 
-      <div className="w-full md:w-7/12 flex flex-wrap justify-end  ">
+      <div className="w-full md:w-7/12 flex flex-wrap justify-center md:justify-end  ">
         {different.map((item, index) => (
           <Card
             key={index}

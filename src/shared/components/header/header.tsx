@@ -7,6 +7,7 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Button from "../button/Button";
 import { homeLogo } from "@/utils/externalMedia";
+import Link from "next/link";
 
 const navLinks = [
   { name: "Home", to: "home" },
@@ -24,7 +25,11 @@ export default function Header() {
     <header className="fixed top-0 left-0 w-full z-50 bg-white">
       <div className="container mx-auto px-4 py-6 flex items-center justify-between">
         {/* LOGO */}
-        <Image src={homeLogo} alt="Logo" width={153} height={39} />
+
+        <Link href={"/"}>
+          {" "}
+          <Image src={homeLogo} alt="Logo" width={153} height={39} />
+        </Link>
 
         {/* DESKTOP NAV */}
         <nav className="hidden md:flex items-center gap-10">
