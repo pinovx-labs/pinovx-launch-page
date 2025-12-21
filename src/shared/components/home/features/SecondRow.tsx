@@ -1,14 +1,29 @@
+"use client"
+
+
 import { featureBuyCrypto, featureTransaction } from "@/utils/externalMedia";
 import { CirclePlus } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
+import { motion } from "framer-motion";
+import { fadeInUp, fadeInScale, staggerContainer } from "@/utils/animation";
+
 export const SecondRow = () => {
   return (
-    <div className="flex flex-col md:flex-row  w-full  gap-7 justify-center md:justify-start ">
-      <div className="w-full md:w-7/12  flex flex-col gap-8 relative bg-[#F2FDF3] h-[500px] justify-between  ">
-        <div className="flex flex-col  mt-8 items-start justify-between gap-5 p-10 ">
-          <div className="flex flex-col  gap-5  ">
+    <motion.div
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className="flex flex-col md:flex-row  w-full  gap-7 justify-center md:justify-start "
+    >
+      <div className="w-full md:w-7/12  flex flex-col gap-2 md:gap-8 relative bg-[#F2FDF3] h-[500px] justify-between  ">
+        <div className="flex flex-col  mt-2  md:mt-8 items-start justify-between gap-5 p-10 ">
+          <motion.div
+            variants={fadeInUp}
+            className="flex flex-col  gap-5  "
+          >
             <h3 className="text-[#02CE13]   font-geist  font-bold  text-2xl md:text-3xl ">
               View Rates{" "}
             </h3>
@@ -16,24 +31,35 @@ export const SecondRow = () => {
               View live exchange rates and convert between fiat and crypto with
               confidence.
             </p>
-          </div>
+          </motion.div>
         </div>
 
-        <div className="flex gap-5 items-center px-10 ">
+        <motion.div
+          variants={fadeInUp}
+          className="flex gap-5 items-center px-10 "
+        >
           <p className="font-inter  text-[#02CE13]  leading-[55px]">
             Learn More
           </p>
-          <CirclePlus size={20}   color="#02ce13" />
-        </div>
+          <CirclePlus size={20} color="#02ce13" />
+        </motion.div>
 
-        <div className="absolute right-0 bottom-0 z-10 ">
+        <motion.div
+          variants={fadeInScale}
+          className="flex items-center justify-center md:absolute md:right-0 md:bottom-0 z-10"
+        >
           <Image
             src={featureTransaction}
             alt="send-money-icon"
             width={364}
             height={310}
+            className="md:h-[310px] md:w-auto"
+            style={{
+              height: "190px",
+              width: "auto",
+            }}
           />
-        </div>
+        </motion.div>
       </div>
 
       <div
@@ -42,8 +68,11 @@ export const SecondRow = () => {
           background: "linear-gradient(to bottom, #02CE13, #01680A)",
         }}
       >
-        <div className="flex flex-col  mt-8 items-start justify-between gap-5 p-10 ">
-          <div className="flex flex-col  gap-5  ">
+        <div className="flex flex-col mt-2  md:mt-8 items-start justify-between gap-5 p-10 ">
+          <motion.div
+            variants={fadeInUp}
+            className="flex flex-col  gap-5  "
+          >
             <h3 className="text-white   font-geist  font-bold  text-2xl md:text-3xl ">
               Crypto Access{" "}
             </h3>
@@ -51,23 +80,41 @@ export const SecondRow = () => {
               Buy digital assets seamlessly using cards, wallets, or available
               balance.
             </p>
-          </div>
+          </motion.div>
         </div>
 
-        <div className="flex gap-5 items-center px-10 ">
+        <motion.div
+          variants={fadeInUp}
+          className="flex gap-5 items-center px-10 "
+        >
           <p className="font-inter  text-white  leading-[55px]">Learn More</p>
           <CirclePlus size={20} color="#ffffff" />
-        </div>
+        </motion.div>
 
-        <div className="absolute right-0 bottom-0 z-10 ">
+        <motion.div
+          variants={fadeInScale}
+          className="
+    relative 
+    h-[150px] 
+    md:h-[299px]
+    md:w-[277px]
+    w-full
+    flex 
+    items-center 
+    justify-center 
+    md:absolute md:right-0 md:bottom-0 
+    z-10
+  "
+        >
           <Image
             src={featureBuyCrypto}
             alt="send-money-icon"
-            width={277}
-            height={299}
+            fill
+            className="object-contain"
+            priority
           />
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };

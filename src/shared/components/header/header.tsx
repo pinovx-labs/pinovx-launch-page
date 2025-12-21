@@ -11,9 +11,10 @@ import { homeLogo } from "@/utils/externalMedia";
 const navLinks = [
   { name: "Home", to: "home" },
   { name: "Product", to: "product" },
-  { name: "Company", to: "company" },
-  { name: "Resources", to: "resources" },
-  { name: "Help", to: "help" },
+  { name: "Process", to: "process" },
+  { name: "Feature", to: "feature" },
+  { name: "Faqs", to: "faqs" },
+  { name: "Contact", to: "contact" },
 ];
 
 export default function Header() {
@@ -119,7 +120,7 @@ export default function Header() {
                   transition={{ delay: navLinks.length * 0.08 }}
                   className="pt-4"
                 >
-                  <Button text="Get Started" type="button" />
+                  <Button text="Get Started" type="button" className="w-full" />
                 </motion.div>
               </nav>
             </motion.div>

@@ -1,4 +1,9 @@
+
+"use client"
+
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { fadeInUp, fadeInScale } from "@/utils/animation";
 
 interface CardProps {
   imgSrc: string;
@@ -8,7 +13,8 @@ interface CardProps {
 
 const Card = ({ imgSrc, text, heading }: CardProps) => {
   return (
-    <div
+    <motion.div
+      variants={fadeInScale}
       className="
         group flex flex-col w-[370px] p-7 gap-5 rounded-2xl 
         bg-[#F7F4ED] cursor-pointer 
@@ -18,12 +24,13 @@ const Card = ({ imgSrc, text, heading }: CardProps) => {
         transform hover:scale-[1.02] hover:shadow-xl
         m-1
       "
-      tabIndex={0} // Makes it focusable
+      tabIndex={0}
       role="button"
       aria-label={`${heading} card`}
     >
       {/* Icon Container */}
-      <div
+      <motion.div
+        variants={fadeInScale}
         className="
           w-[60px] h-[60px] bg-[#19451D] 
           flex items-center justify-center rounded-lg
@@ -39,11 +46,12 @@ const Card = ({ imgSrc, text, heading }: CardProps) => {
           height={34}
           className="transition-transform duration-300 group-hover:scale-110 group-focus:scale-110"
         />
-      </div>
+      </motion.div>
 
       {/* Text Content */}
       <div className="flex flex-col gap-3">
-        <p
+        <motion.p
+          variants={fadeInUp}
           className="
             font-inter  mb-8 font-bold text-xl text-black
             transition-colors duration-300
@@ -52,8 +60,10 @@ const Card = ({ imgSrc, text, heading }: CardProps) => {
           "
         >
           {heading}
-        </p>
-        <p
+        </motion.p>
+
+        <motion.p
+          variants={fadeInUp}
           className="
             font-inter font-medium text-[16px] text-black
             transition-colors duration-300
@@ -62,9 +72,9 @@ const Card = ({ imgSrc, text, heading }: CardProps) => {
           "
         >
           {text}
-        </p>
+        </motion.p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,13 +1,28 @@
+
+"use client"
+
 import { diffPhoto } from "@/utils/externalMedia";
 import Image from "next/image";
 import React from "react";
 import { different } from "../../../../../public/assets/data/different";
 import Card from "./Card";
 
+import { motion } from "framer-motion";
+import { fadeInScale, staggerContainer } from "@/utils/animation";
+
 const DifferentCard = () => {
   return (
-    <div className="w-full flex flex-col md:flex-row  gap-4  justify-between   ">
-      <div className="w-5/12 ">
+    <motion.div
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className="w-full flex flex-col md:flex-row  gap-4  justify-between   "
+    >
+      <motion.div
+        variants={fadeInScale}
+        className="w-5/12 hidden lg:block "
+      >
         <Image
           src={diffPhoto}
           alt="image"
@@ -15,9 +30,9 @@ const DifferentCard = () => {
           width={431}
           height={485}
         />
-      </div>
+      </motion.div>
 
-      <div className="w-full md:w-7/12 flex flex-wrap justify-end border border-blue-800  ">
+      <div className="w-full md:w-7/12 flex flex-wrap justify-end  ">
         {different.map((item, index) => (
           <Card
             key={index}
@@ -27,7 +42,7 @@ const DifferentCard = () => {
           />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

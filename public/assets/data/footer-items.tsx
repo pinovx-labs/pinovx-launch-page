@@ -4,15 +4,15 @@
       header: "Company",
       sectionA: {
         title: "About Us",
-        href: "about-us",
+        href: "#",
       },
       sectionB: {
         title: "Careers",
-        href: "careers",
+        href: "#",
       },
       sectionC: {
         title: "Blog",
-        href: "blog",
+        href: "#",
       },
     },
     {
@@ -20,15 +20,15 @@
       header: "Legal",
       sectionA: {
         title: "AML/CTF Policy",
-        href: "aml-policy",
+        href: "#",
       },
       sectionB: {
         title: "Privacy Policy",
-        href: "privacy-policy",
+        href: "#",
       },
       sectionC: {
         title: "Terms of Use",
-        href: "terms-of-use",
+        href: "#",
       },
     },
     {
@@ -36,7 +36,7 @@
       header: "Support",
       sectionA: {
         title: "Help center",
-        href: "help-center",
+        href: "#",
       },
       sectionB: {
         title: "Contact Us",
@@ -44,7 +44,7 @@
       },
       sectionC: {
         title: "Faqs",
-        href: "faqs",
+        href: "#",
       },
     },
   ];

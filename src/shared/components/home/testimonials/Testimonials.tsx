@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { motion } from "framer-motion";
 import { testimonials } from "../../../../../public/assets/data/testimonials";
 import Image from "next/image";
 import { testimonialLeft, testimonialRight } from "@/utils/externalMedia";
@@ -14,7 +15,8 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 // Import required modules
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { Navigation,  Autoplay } from 'swiper/modules';
+import { fadeInScale, fadeInUp, staggerContainer } from "@/utils/animation";
 
 const TestimonialsSection = () => {
   // Create refs for navigation
@@ -22,18 +24,26 @@ const TestimonialsSection = () => {
   const nextRef = React.useRef<HTMLDivElement>(null);
 
   return (
-    <main className="w-full mt-10 bg-[#F2FDF3]   border border-yellow-500">
-      <section className="container mx-auto px-4 bg-[#F2FDF3]">
-        <div className="w-full flex flex-col py-8 md:flex-row">
+    <main className="w-full mt-10 bg-[#F2FDF3]  ">
+      <section className="container mx-auto px-4 bg-[#F2FDF3]" id="contact">
+        <motion.div 
+          className="w-full flex flex-col py-8 md:flex-row"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
           {/* Left Section with Title and Navigation */}
-          <div className="w-full md:w-4/12 flex flex-col justify-between mb-8 md:mb-0">
+          <motion.div 
+            className="w-full md:w-4/12 flex flex-col justify-between mb-8 md:mb-0"
+            variants={fadeInUp}
+          >
             <div>
               <p className=" font-semibold text-[#000000] uppercase  mb-4 font-geist text-xl ">
                 TESTIMONIALS
               </p>
               <h2 className="md:text-[40px] lg:text-5xl font-bold text-gray-900 leading-tight font-geist text-2xl ">
                 What Our Users
-                <br />
                 Are Saying
               </h2>
             </div>
@@ -62,13 +72,16 @@ const TestimonialsSection = () => {
                 />
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Right Section - Swiper Carousel */}
-          <div className="w-full md:w-8/12 md:pl-8">
+          <motion.div 
+            className="w-full md:w-8/12 md:pl-8"
+            variants={fadeInScale}
+          >
             <Swiper
               // Install Swiper modules
-              modules={[Navigation, Pagination, Autoplay]}
+              modules={[Navigation, Autoplay]}
               spaceBetween={30}
               slidesPerView={1}
               navigation={{
@@ -106,8 +119,8 @@ const TestimonialsSection = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </section>
     </main>
   );

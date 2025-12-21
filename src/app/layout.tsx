@@ -4,11 +4,17 @@ import Providers from "./providers";
 import { inter, montserrat, geist, roboto } from "./fonts";
 import Footer from "@/shared/components/footer/Footer";
 import Header from "@/shared/components/header/header";
+import ScrollProgressIndicator from "@/utils/ScrollProgress";
 
 export const metadata: Metadata = {
-  title: "E-commerce Multi Vendor Seller Ui",
+  title: "Pinovx",
   description:
-    "E-commerce Multi Vendor app built with express.js and microservice",
+    "Send money across borders instantly with speed, clarity, and confidence.",
+  icons: {
+    icon: "https://res.cloudinary.com/danxk4ua5/image/upload/v1766226348/Vector_2_oxx7rl.svg",
+    shortcut: "https://res.cloudinary.com/danxk4ua5/image/upload/v1766226348/Vector_2_oxx7rl.svg",
+    apple: "https://res.cloudinary.com/danxk4ua5/image/upload/v1766226348/Vector_2_oxx7rl.svg",
+  },
 };
 
 export default function RootLayout({
@@ -27,11 +33,10 @@ export default function RootLayout({
         `}
       >
         <Providers>
-          
-          <Header/>
+          <Header />
           {children}
-
-          <Footer/>
+          <Footer />
+          <ScrollProgressIndicator />
         </Providers>
       </body>
     </html>

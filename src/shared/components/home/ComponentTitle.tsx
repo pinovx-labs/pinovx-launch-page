@@ -1,12 +1,21 @@
+"use client";
+
+import { fadeInUp } from "@/utils/animation";
+import { motion } from "framer-motion";
 import React from "react";
+
 interface textProps {
   text: string;
 }
+
 const ComponentTitle = ({ text }: textProps) => {
   return (
-    <h2 className="font-semibold  uppercase font-geist text-lg md:text-xl text-[#4EDD5A]">
+    <motion.h2
+      variants={fadeInUp}
+      className="font-semibold uppercase font-geist text-lg md:text-xl text-[#4EDD5A]"
+    >
       {text}
-    </h2>
+    </motion.h2>
   );
 };
 

@@ -1,7 +1,10 @@
+"use client"
 import { downQuote, testimonialImg, topQuote } from "@/utils/externalMedia";
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 import { Rating } from "react-simple-star-rating";
+import { fadeInUp } from "@/utils/animation";
 
 interface testimonialProps {
   testimony: string;
@@ -10,6 +13,7 @@ interface testimonialProps {
   imgSrc: string;
   rating: number;
 }
+
 const TestimonyCard = ({
   testimony,
   name,
@@ -19,7 +23,12 @@ const TestimonyCard = ({
 }: testimonialProps) => {
   return (
     <div className="flex flex-col gap-[30px]  ">
-      <div className="relative  font-inter p-6 font-medium text-[21px]  text-black  leading-[47px] ">
+      <motion.div 
+        className="relative  font-inter p-6 font-medium text-[16px] md:text-[21px]  text-black   leading-[47px] "
+        variants={fadeInUp}
+        initial="hidden"
+        animate="visible"
+      >
         {testimony}
 
         <Image
@@ -36,27 +45,37 @@ const TestimonyCard = ({
           height={24}
           className="absolute bottom-1 right-4 "
         />
-      </div>
-<div className="flex justify-between items-end ">
-  <div className="flex gap-5 ">
-    <Image src={imgSrc} alt="quote" width={113} height={112} />
-    <div className="flex flex-col gap-3 items-start justify-center">
-      <p className="font-inter font-semibold text-[21px]">{name}</p>
-      <p className="font-inter font-semibold text-[21px]">{address}</p>
-    </div>
-  </div>
-  <div className="inline-flex  justify-end items-center">
-    <Rating
-      initialValue={rating}
-      readonly
-      size={24}
-      fillColor="#000000"
-      emptyColor="#E5E7EB"
-      SVGstyle={{ display: "inline" }}
-      className="flex! flex-row!"
-    />
-  </div>
-</div>
+      </motion.div>
+      <motion.div 
+        className="flex flex-col md:flex-row justify-between items-start md:items-end  "
+        variants={fadeInUp}
+        initial="hidden"
+        animate="visible"
+        transition={{ delay: 0.2 }}
+      >
+        <div className="flex gap-5 items-start md:items-end   w-full   ">
+          <Image src={imgSrc} alt="quote" width={113} height={112} />
+          <div className="flex flex-col gap-1 md:gap-3  items-start justify-center">
+            <p className="font-inter font-medium md:font-semibold text-[21px]">
+              {name}
+            </p>
+            <p className="font-inter font-medium md:font-semibold text-[21px]">
+              {address}
+            </p>
+          </div>
+        </div>
+        <div className="inline-flex justify-center  w-full md:w-auto md:justify-end items-center  -mt-10 md:mt-0 ">
+          <Rating
+            initialValue={rating}
+            readonly
+            size={24}
+            fillColor="#000000"
+            emptyColor="#E5E7EB"
+            SVGstyle={{ display: "inline" }}
+            className="flex! flex-row!"
+          />
+        </div>
+      </motion.div>
     </div>
   );
 };

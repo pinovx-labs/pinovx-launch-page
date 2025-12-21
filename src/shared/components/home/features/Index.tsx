@@ -1,26 +1,38 @@
-import React from 'react'
-import ComponentTitle from "../ComponentTitle"
-import ComponentHeading from "../ComponentHeading"
-import { SecondRow } from "./SecondRow"
-import { FirstRow } from "./FirstRow"
+"use client";
+import React from "react";
+import ComponentTitle from "../ComponentTitle";
+import ComponentHeading from "../ComponentHeading";
+import { SecondRow } from "./SecondRow";
+import { FirstRow } from "./FirstRow";
+import { motion } from "framer-motion";
+import { slideInBottom, staggerContainer } from "@/utils/animation";
 
 const Feature = () => {
   return (
-
-    <main className="w-full mt-10   border border-yellow-500">
-      <section className="container  mx-auto  px-4 ">
-        <div className="flex flex-col gap-8  items-center justify-center ">
+    <main className="w-full mt-10  ">
+      <section className="container  mx-auto  px-4 " id="product" >
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="flex flex-col gap-8  items-center justify-center "
+        >
           <ComponentTitle text="Features" />
-          <ComponentHeading text="Built to Move Money Smarter, Across Borders."  className="max-w-[851px] text-center " />
-        </div>
+          <ComponentHeading
+            text="Built to Move Money Smarter, Across Borders."
+            className="max-w-[851px] text-center "
+          />
+        </motion.div>
 
-        <div className="flex flex-col gap-5 my-4   border border-red-500">
+        <div className="flex flex-col gap-5 my-4   ">
           <FirstRow />
 
           <SecondRow />
         </div>
       </section>
-    </main>  )
-}
+    </main>
+  );
+};
 
-export default Feature
+export default Feature;

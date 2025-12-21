@@ -1,9 +1,13 @@
-"use client";
 
+"use client"
+
+"use client";
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { Plus, Minus } from "lucide-react"; // or your own icons
 import { addFaqs, removeFaqs } from "@/utils/externalMedia";
 import Image from "next/image";
+import { fadeInUp } from "@/utils/animation";
 
 type Faq = {
   question: string;
@@ -25,11 +29,15 @@ const FaqAccordion = ({ items }: Props) => {
     <div className="flex flex-col gap-4">
       {items.map((faq, index) => {
         const isOpen = activeIndex === index;
-
         return (
-          <div
+          <motion.div
             key={index}
             className="bg-[#19451D] rounded-[15px] px-6 py-[15px] text-white"
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ delay: index * 0.1 }}
           >
             {/* Question */}
             <div
@@ -37,7 +45,6 @@ const FaqAccordion = ({ items }: Props) => {
               className="w-full flex items-center justify-between text-left"
             >
               <h4 className="font-inter font-semibold text-xl ">{faq.question}</h4>
-
               <Image
                 src={isOpen ? removeFaqs : addFaqs}
                 alt="faqs "
@@ -45,7 +52,6 @@ const FaqAccordion = ({ items }: Props) => {
                 height={24}
               />
             </div>
-
             {/* Answer */}
             <div
               className={`grid transition-all duration-300 ease-in-out ${
@@ -62,7 +68,7 @@ const FaqAccordion = ({ items }: Props) => {
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
         );
       })}
     </div>
