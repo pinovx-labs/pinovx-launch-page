@@ -34,7 +34,7 @@ export default function HeroSection() {
               <div className="flex flex-col gap-6 text-center items-center  ">
                 <motion.p
                   variants={fadeInUp}
-                  className="font-geist font-medium text-4xl md:text-[58px] md:leading-[70px] leading-tight max-w-[871px] text-black"
+                  className="font-geist font-medium px-2 md:px-0 text-4xl md:text-[58px] md:leading-[70px] leading-tight max-w-[871px] text-black"
                 >
                   A Smarter Way to Move{" "}
                   <span className="font-extrabold">Money & Crypto</span>
@@ -42,7 +42,7 @@ export default function HeroSection() {
 
                 <motion.p
                   variants={fadeInUp}
-                  className="font-inter font-medium text-lg md:text-xl md:leading-[30px] leading-relaxed max-w-[719px] text-black/80"
+                  className="font-inter  px-2 md:px-0 font-medium text-lg md:text-xl md:leading-[30px] leading-relaxed max-w-[719px] text-black/80"
                 >
                   Send money, buy crypto, and convert assets seamlessly in one
                   secure app. Launching soon, be the first to know when PinovX
