@@ -53,8 +53,8 @@ const TestimonyCard = ({
         animate="visible"
         transition={{ delay: 0.2 }}
       >
-        <div className="flex gap-5 items-start md:items-end   w-full  h-auto  ">
-          <div className=" py-3 md:py-0 ">
+        <div className="flex gap-5 items-start md:items-end    w-full  h-auto  ">
+          <div className=" py-5 md:py-0 ">
             {" "}
             <Image src={imgSrc} alt="quote" width={113} height={112} />
           </div>

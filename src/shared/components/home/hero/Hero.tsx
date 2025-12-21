@@ -31,7 +31,7 @@ export default function HeroSection() {
               className="absolute z-10 flex flex-col items-center justify-center mt-[450px] "
             >
               {/* TEXT + INPUT */}
-              <div className="flex flex-col gap-6 text-center items-center  ">
+              <div className="flex flex-col gap-6 text-center items-center mt-2 md:mt-0  ">
                 <motion.p
                   variants={fadeInUp}
                   className="font-geist font-medium px-2 md:px-0 text-4xl md:text-[58px] md:leading-[70px] leading-tight max-w-[871px] text-black"
