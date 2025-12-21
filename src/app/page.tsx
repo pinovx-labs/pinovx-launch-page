@@ -8,7 +8,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="">
+    <div className="flex flex-col gap-16 md:gap-24">
       <HeroSection />
       <Feature />
       <HowItWorks />
