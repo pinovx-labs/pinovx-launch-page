@@ -53,11 +53,9 @@ const TestimonyCard = ({
         animate="visible"
         transition={{ delay: 0.2 }}
       >
-        <div className="flex gap-5 items-start md:items-end    w-full  h-auto  ">
-          <div className=" py-5 md:py-0 ">
+        <div className="flex gap-5 items-center   w-full  h-auto  ">
             {" "}
             <Image src={imgSrc} alt="quote" width={113} height={112} />
-          </div>
 
           <div className="flex flex-col gap-1 md:gap-3  items-start justify-center">
             <p className="font-inter font-medium md:font-semibold text-[21px]">
@@ -66,9 +64,28 @@ const TestimonyCard = ({
             <p className="font-inter font-medium md:font-semibold text-[21px]">
               {address}
             </p>
+
+
+
+
+        <div className="inline-flex md:hidden ">
+          <Rating
+            initialValue={rating}
+            readonly
+            size={24}
+            fillColor="#000000"
+            emptyColor="#E5E7EB"
+            SVGstyle={{ display: "inline" }}
+            className="flex! flex-row!"
+          />
+        </div>
+
+
+
+
           </div>
         </div>
-        <div className="inline-flex justify-center  w-full md:w-auto md:justify-end items-center  -mt-10 md:mt-0 ">
+        <div className=" hidden  md:inline-flex  w-full justify-end items-end   ">
           <Rating
             initialValue={rating}
             readonly
