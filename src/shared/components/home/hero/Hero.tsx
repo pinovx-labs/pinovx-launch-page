@@ -1,13 +1,14 @@
-"use client"
+"use client";
 import Image from "next/image";
 import Button from "../../button/Button";
 import { motion } from "framer-motion";
 import { fadeInScale, fadeInUp, staggerContainer } from "@/utils/animation";
+import { sponsors } from "../../../../../public/assets/data/sponsors";
 
 export default function HeroSection() {
   return (
     <main className="w-full  bg-white   mt-14 ">
-      <section className="relative w-full "  id="home">
+      <section className="relative w-full " id="home">
         {/* White space above for content that shoots out */}
 
         {/* Gradient Background */}
@@ -86,6 +87,30 @@ export default function HeroSection() {
           </motion.div>
         </div>
       </section>
+      <div className="flex justify-center items-center flex-wrap bg-[#F8F8F8] flex-col gap-6 py-10 ">
+        <motion.p
+          className="font-montserrat md-font-bold font-semibold text-[16px] text-center text-black "
+          variants={fadeInUp}
+        >
+          POWERED BY
+        </motion.p>
+        <motion.div
+          className="flex  gap-5 flex-wrap py-3 items-center justify-center "
+          initial="hidden"
+          animate="visible"
+          variants={staggerContainer}
+        >
+          {sponsors.map((img, i) => (
+            <Image
+              src={img.img}
+              key={i}
+              alt="sponsors"
+              width={img.width}
+              height={img.height}
+            />
+          ))}
+        </motion.div>
+      </div>
     </main>
   );
 }

@@ -94,7 +94,7 @@ const TestimonialsSection = () => {
                 bulletActiveClass: 'swiper-pagination-bullet-active !bg-black',
               }}
               autoplay={{
-                delay: 5000,
+                delay: 7000,
                 disableOnInteraction: false,
               }}
               loop={true}
