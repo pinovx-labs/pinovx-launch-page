@@ -12,7 +12,7 @@ import { fadeInUp, staggerContainer } from "@/utils/animation";
 
 const Footer = () => {
   return (
-    <main className="w-full bg-[#191919] mt-8 ">
+    <main className="w-full bg-[#124517] mt-8 ">
       <footer className="container mx-auto px-4  ">
         <motion.div 
           className="flex flex-col md:flex-row gap-6 h-auto  justify-between py-10  "
@@ -28,7 +28,7 @@ const Footer = () => {
           >
             <Image src={footerLogo} alt="logo" width={163} height={44} />
             <p className="font-montserrat font-normal  md:font-medium max-w-[412px] text-lg md:text-xl text-white mt-6 ">
-              Proven in Network of Value: Powering Payments with Purpose
+              Proven in Network of Value: <br/> Powering Payments with Purpose
             </p>
           </motion.div>
 
@@ -56,7 +56,7 @@ const Footer = () => {
       </footer>
 
       <motion.div 
-        className="font-montserrat  font-medium text-[11px] text-center leading-[27px] text-white bg-[#000000] w-full flex justify-center items-center mt-6 py-6   "
+        className="font-montserrat  font-medium text-[11px] text-center leading-[27px] text-white bg-[#112A13] w-full flex justify-center items-center mt-6 py-6   "
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, amount: 0.3 }}

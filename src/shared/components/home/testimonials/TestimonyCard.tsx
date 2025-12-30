@@ -24,7 +24,7 @@ const TestimonyCard = ({
   return (
     <div className="flex flex-col gap-[30px]  ">
       <motion.div
-        className="relative  font-inter p-6 font-medium text-[16px] md:text-[21px]  text-black   leading-[47px] "
+        className="relative  font-inter p-6 font-medium text-[16px] md:text-[21px]  text-white   leading-[47px] "
         variants={fadeInUp}
         initial="hidden"
         animate="visible"
@@ -57,7 +57,7 @@ const TestimonyCard = ({
             {" "}
             <Image src={imgSrc} alt="quote" width={113} height={112} />
 
-          <div className="flex flex-col gap-1 md:gap-3  items-start justify-center">
+          <div className="flex flex-col gap-1 md:gap-3  items-start justify-center text-white">
             <p className="font-inter font-medium md:font-semibold text-[21px]">
               {name}
             </p>
@@ -73,8 +73,8 @@ const TestimonyCard = ({
             initialValue={rating}
             readonly
             size={24}
-            fillColor="#000000"
-            emptyColor="#E5E7EB"
+            fillColor="#ffffff"
+            emptyColor="gray"
             SVGstyle={{ display: "inline" }}
             className="flex! flex-row!"
           />
@@ -90,8 +90,8 @@ const TestimonyCard = ({
             initialValue={rating}
             readonly
             size={24}
-            fillColor="#000000"
-            emptyColor="#E5E7EB"
+            fillColor="#ffffff"
+            emptyColor="gray"
             SVGstyle={{ display: "inline" }}
             className="flex! flex-row!"
           />

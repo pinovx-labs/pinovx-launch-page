@@ -5,15 +5,22 @@ export const addFaqs =
 export const removeFaqs =
   "https://res.cloudinary.com/danxk4ua5/image/upload/v1766156038/minus-cirlce_ydrclx.svg";
 export const testimonialLeft =
-  "https://res.cloudinary.com/danxk4ua5/image/upload/v1766158461/arrow-circle-left_p0rqp0.svg";
+
+
+"https://res.cloudinary.com/danxk4ua5/image/upload/v1767054351/arrow-circle-leftt_zef7cz.svg"
+
+
 export const testimonialRight =
-  "https://res.cloudinary.com/danxk4ua5/image/upload/v1766158313/arrow-circle-right_sqnu78.svg";
+
+
+"https://res.cloudinary.com/danxk4ua5/image/upload/v1767054334/arrow-circle-left_rgei4w.svg"
 export const testimonialImg =
   "https://res.cloudinary.com/danxk4ua5/image/upload/v1766158335/Ellipse_2_1_kkrrab.svg";
 export const topQuote =
-  "https://res.cloudinary.com/danxk4ua5/image/upload/v1766162088/q5d9rfp7zpdfp5msfhgh.svg";
+
+"https://res.cloudinary.com/danxk4ua5/image/upload/v1767054217/tesivmhugkeuu7browpb.svg"
 export const downQuote =
-  "https://res.cloudinary.com/danxk4ua5/image/upload/v1766162165/1_npv6ys.svg";
+"https://res.cloudinary.com/danxk4ua5/image/upload/v1767054217/1_fxe3xq.svg"
 export const diffMoney =
   "https://res.cloudinary.com/danxk4ua5/image/upload/v1766173109/money_kfyri3.svg";
 export const diffGlobal =
@@ -39,5 +46,5 @@ export const featureSendMoney =
 export const heroDevice =
   "https://res.cloudinary.com/danxk4ua5/image/upload/v1766219585/iPhone_12_Pro_Wooden_Hands_jn3yac.svg";
 export const homeLogo =
-  "https://res.cloudinary.com/danxk4ua5/image/upload/v1766226348/Vector_2_oxx7rl.svg";
+  "https://res.cloudinary.com/danxk4ua5/image/upload/v1767052613/Vector_3_ujnxp6.svg";
 

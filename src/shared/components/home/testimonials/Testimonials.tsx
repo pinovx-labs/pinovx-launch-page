@@ -24,8 +24,8 @@ const TestimonialsSection = () => {
   const nextRef = React.useRef<HTMLDivElement>(null);
 
   return (
-    <main className="w-full mt-10 bg-[#F2FDF3]  ">
-      <section className="container mx-auto px-4 bg-[#F2FDF3]" id="contact">
+    <main className="w-full mt-10 bg-linear-to-b from-[#02CE13] to-[#01680A]  ">
+      <section className="container mx-auto px-4 bg-linear-to-b from-[#02CE13] to-[#01680A]" id="contact">
         <motion.div 
           className="w-full flex flex-col py-8 md:flex-row"
           variants={staggerContainer}
@@ -39,10 +39,10 @@ const TestimonialsSection = () => {
             variants={fadeInUp}
           >
             <div>
-              <p className=" font-semibold text-[#000000] uppercase  mb-4 font-geist text-xl ">
+              <p className=" font-semibold text-[#ffffff] uppercase  mb-4 font-geist text-xl ">
                 TESTIMONIALS
               </p>
-              <h2 className="md:text-[40px] lg:text-5xl font-bold text-gray-900 leading-tight font-geist text-2xl ">
+              <h2 className="md:text-[40px] lg:text-5xl font-bold text-white leading-tight font-geist text-2xl ">
                 What Our Users
                 Are Saying
               </h2>

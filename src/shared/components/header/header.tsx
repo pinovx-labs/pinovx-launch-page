@@ -22,7 +22,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-white">
+    <header className="fixed top-0 left-0 w-full z-50 bg-[#19451D] border-b border-[#E4E4E4] ">
       <div className="container mx-auto px-4 py-6 flex items-center justify-between">
         {/* LOGO */}
 
@@ -43,7 +43,7 @@ export default function Header() {
               duration={600}
               activeClass="text-green-500"
               className="cursor-pointer text-lg font-medium font-geist
-                         text-black transition-colors duration-300
+                         text-white transition-colors duration-300
                          hover:text-green-500"
             >
               {link.name}
