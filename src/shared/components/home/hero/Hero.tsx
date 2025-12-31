@@ -17,7 +17,6 @@ export default function HeroSection() {
           style={{
             backgroundImage:
               "url(https://res.cloudinary.com/danxk4ua5/image/upload/v1767052953/background_1_if2srs.svg)",
-              border:"2px solid red"
           }}
         >
           {/* fade-in background container */}
