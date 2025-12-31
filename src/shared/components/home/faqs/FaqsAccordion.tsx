@@ -11,7 +11,7 @@ import { fadeInUp } from "@/utils/animation";
 
 type Faq = {
   question: string;
-  answer: string;
+  answer: string | React.ReactNode;
 };
 
 type Props = {
@@ -32,7 +32,7 @@ const FaqAccordion = ({ items }: Props) => {
         return (
           <motion.div
             key={index}
-            className="bg-[#19451D] rounded-[15px] px-6 py-[15px] text-white"
+            className="bg-[#19451D] rounded-[15px] px-6 py-[15px] text-white  cursor-pointer"
             variants={fadeInUp}
             initial="hidden"
             whileInView="visible"

@@ -8,12 +8,12 @@ import { sponsors } from "../../../../../public/assets/data/sponsors";
 export default function HeroSection() {
   return (
     <main className="w-full  bg-[#19451D]   mt-14 ">
-      <section className="relative w-full " id="home">
+      <section className=" w-full " id="home">
         {/* White space above for content that shoots out */}
 
         {/* Gradient Background */}
         <div
-          className="w-full bg-no-repeat     bg-center bg-contain relative min-h-[750px] md:min-h-[900px]"
+          className="w-full bg-no-repeat     bg-center bg-contain  min-h-[750px] md:min-h-[900px]"
           style={{
             backgroundImage:
               "url(https://res.cloudinary.com/danxk4ua5/image/upload/v1767052953/background_1_if2srs.svg)",

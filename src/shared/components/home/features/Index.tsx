@@ -18,10 +18,10 @@ const Feature = () => {
           viewport={{ once: true, amount: 0.3 }}
           className="flex flex-col gap-8  items-center justify-center "
         >
-          <ComponentTitle text="Features" />
+          <ComponentTitle text="Features"  className="text-[#4EDD5A]"/>
           <ComponentHeading
             text="Built to Move Money Smarter, Across Borders."
-            className="max-w-[851px] text-center "
+            className="max-w-[851px] text-center  text-[#19461D] "
           />
         </motion.div>
 

@@ -6,14 +6,15 @@ import React from "react";
 
 interface textProps {
   text: string;
+  className?:string
 }
 
-const ComponentTitle = ({ text }: textProps) => {
+const ComponentTitle = ({ text, className }: textProps) => {
   return (
     <motion.h2
       variants={fadeInUp}
-      className="font-semibold uppercase font-geist text-lg md:text-xl text-[#4EDD5A]"
-    >
+      className={`font-semibold uppercase font-geist text-lg md:text-xl text-[#4EDD5A]    ${className}`
+ }   >
       {text}
     </motion.h2>
   );
