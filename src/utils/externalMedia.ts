@@ -34,7 +34,8 @@ export const userIcon =
 export const bitcoinIcon =
   "https://res.cloudinary.com/danxk4ua5/image/upload/v1766179853/bitcoin-convert_rnu1hd.svg";
 export const checkerIcon =
-  "https://res.cloudinary.com/danxk4ua5/image/upload/v1766180507/shield-tick_kgfcpx.png";
+"https://res.cloudinary.com/danxk4ua5/image/upload/v1767308170/shield-tick_gd4fse.svg"
+
 export const featureTransaction =
   "https://res.cloudinary.com/danxk4ua5/image/upload/v1767206747/Frame_2147226256_wywzxx.svg";
 export const featurePayment =
