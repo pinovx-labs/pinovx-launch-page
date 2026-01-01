@@ -1,7 +1,7 @@
 "use client";
 
 import { featureBuyCrypto, featurePayment, featureTransaction } from "@/utils/externalMedia";
-import { CirclePlus } from "lucide-react";
+import { CirclePlus, User2 } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 

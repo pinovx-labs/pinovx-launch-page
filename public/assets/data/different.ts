@@ -1,28 +1,38 @@
-import { diffFlash, diffGlobal, diffLock, diffMoney } from "@/utils/externalMedia";
+import {
+  diffFlash,
+  diffGlobal,
+  diffLock,
+  diffMoney,
+} from "@/utils/externalMedia";
 
-export const different =[
-    {
-        id:0,
-        heading:"Fast Remittances", 
-        imgSrc:diffFlash,
-        text:"Transfers process in minutes , whether it’s crypto or fiat, speed is at the core."
-    },
-    {
-        id:1,
-        heading:"Cross-Border Support", 
-        imgSrc:diffGlobal,
-        text:"Reach over 10 countries across Africa, Asia, and beyond."
-    },
-    {
-        id:2,
-        heading:"Multi-Currency Support", 
-        imgSrc:diffMoney,
-        text:"Send and Receive between CAD, NGN, USDT, BTC, and more  all in one app."
-    },
-    {
-        id:3,
-        heading:" Secure & Compliant", 
-        imgSrc:diffLock,
-        text:"Transfers process in minutes , whether it’s crypto or fiat, speed is at the core."
-    },
-]
+export const different = [
+  {
+    id: 0,
+    heading: "Settlement, Not Speculation",
+    imgSrc: diffFlash,
+    text: "We’re built for predictable execution and value settlement ,not trading activity or price chasing.",
+    bgColor: "#19451D",
+  },
+  {
+    id: 1,
+    heading: "Single Access, All Digital Value",
+    imgSrc: diffGlobal,
+    text: "Buy, sell, and move value across rails with clarified expectations. No Surprises.",
+    bgColor: "#02C112",
+  },
+  {
+    id: 2,
+    heading: "Non-custodial Design",
+    imgSrc: diffMoney,
+    text: "Digital assets are delivered directly to your own wallet. You keep ownership.",
+    bgColor:
+      "linear-gradient(to_bottom,#02CE13_0%,#02CE13_20%,#019B10_60%,#01680A_100%)",
+  },
+  {
+    id: 3,
+    heading: " Secure & Compliant",
+    imgSrc: diffLock,
+    text: "The PinovX model preserves user control from start to finish.",
+    bgColor: "#19451D",
+  },
+];

@@ -53,7 +53,7 @@ export default function Header() {
 
         {/* DESKTOP CTA */}
         <div className="hidden md:block">
-          <Button text="Get Started" type="button" />
+          <Button text="Access OTC" type="button" />
         </div>
 
         {/* MOBILE MENU BUTTON */}
@@ -125,7 +125,7 @@ export default function Header() {
                   transition={{ delay: navLinks.length * 0.08 }}
                   className="pt-4"
                 >
-                  <Button text="Get Started" type="button" className="w-full" />
+                  <Button text="Access OTC" type="button" className="w-full" />
                 </motion.div>
               </nav>
             </motion.div>

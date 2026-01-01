@@ -9,21 +9,22 @@ interface CardProps {
   imgSrc: string;
   text: string;
   heading: string;
+  bgColor:string
 }
 
-const Card = ({ imgSrc, text, heading }: CardProps) => {
+const Card = ({ imgSrc, text, heading, bgColor }: CardProps) => {
   return (
     <motion.div
       variants={fadeInScale}
-      className="
+      className={` h-[236px]
         group flex flex-col w-[370px] p-7 gap-5 rounded-2xl 
-        bg-[#F7F4ED] cursor-pointer 
+        bg-[${bgColor}] cursor-pointer 
         transition-all duration-300 ease-in-out
         hover:bg-[#19451D] 
         focus:bg-[#19451D] focus:outline-none focus:ring-2 focus:ring-[#28D536] focus:ring-offset-2
         transform hover:scale-[1.02] hover:shadow-xl
         m-1
-      "
+      `}
       tabIndex={0}
       role="button"
       aria-label={`${heading} card`}
@@ -32,7 +33,7 @@ const Card = ({ imgSrc, text, heading }: CardProps) => {
       <motion.div
         variants={fadeInScale}
         className="
-          w-[60px] h-[60px] bg-[#19451D] 
+          w-[60px] h-[60px] bg-[#28D536] 
           flex items-center justify-center rounded-lg
           transition-all duration-300
           group-hover:bg-[#28D536] 
@@ -53,7 +54,7 @@ const Card = ({ imgSrc, text, heading }: CardProps) => {
         <motion.p
           variants={fadeInUp}
           className="
-            font-inter  mb-8 font-bold text-xl text-black
+            font-inter  mb-8 font-bold text-xl text-white
             transition-colors duration-300
             group-hover:text-white 
             group-focus:text-white
@@ -65,7 +66,7 @@ const Card = ({ imgSrc, text, heading }: CardProps) => {
         <motion.p
           variants={fadeInUp}
           className="
-            font-inter font-medium text-[16px] text-black
+            font-inter font-medium text-[16px] text-white
             transition-colors duration-300
             group-hover:text-white 
             group-focus:text-white

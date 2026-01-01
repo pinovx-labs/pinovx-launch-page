@@ -16,9 +16,11 @@ export const topQuote =
 export const downQuote =
   "https://res.cloudinary.com/danxk4ua5/image/upload/v1767054217/1_fxe3xq.svg";
 export const diffMoney =
-  "https://res.cloudinary.com/danxk4ua5/image/upload/v1766173109/money_kfyri3.svg";
+"https://res.cloudinary.com/danxk4ua5/image/upload/v1767307734/money_k9qb65.svg"
+
 export const diffGlobal =
-  "https://res.cloudinary.com/danxk4ua5/image/upload/v1766173109/global_xwwsca.svg";
+"https://res.cloudinary.com/danxk4ua5/image/upload/v1767307752/global_tra8vv.svg"
+
 export const diffLock =
   "https://res.cloudinary.com/danxk4ua5/image/upload/v1766173109/lock_v1mbjx.svg";
 export const diffFlash =
@@ -26,7 +28,9 @@ export const diffFlash =
 export const diffPhoto =
   "https://res.cloudinary.com/danxk4ua5/image/upload/v1766173110/Frame_2147226245_ldmefv.svg";
 export const userIcon =
-  "https://res.cloudinary.com/danxk4ua5/image/upload/v1766179789/frame_or6blt.svg";
+
+"https://res.cloudinary.com/danxk4ua5/image/upload/v1767294671/frame_pilgpj.svg"
+
 export const bitcoinIcon =
   "https://res.cloudinary.com/danxk4ua5/image/upload/v1766179853/bitcoin-convert_rnu1hd.svg";
 export const checkerIcon =

@@ -9,7 +9,7 @@ import Card from "./Card";
 
 import { motion } from "framer-motion";
 import { fadeInScale, staggerContainer } from "@/utils/animation";
-
+import photo from "../../../../../public/assets/diff-photo.svg"
 const DifferentCard = () => {
   return (
     <motion.div
@@ -17,16 +17,15 @@ const DifferentCard = () => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      className="w-full flex flex-col md:flex-row  gap-4  justify-between   "
+      className="w-full flex flex-col md:flex-row  gap-4  justify-between  "
     >
       <motion.div
         variants={fadeInScale}
-        className="w-5/12 hidden lg:block "
+        className="w-full md:w-5/12  "
       >
         <Image
-          src={diffPhoto}
+          src={photo}
           alt="image"
-          className="w-full h-full"
           width={431}
           height={485}
         />
@@ -39,6 +38,7 @@ const DifferentCard = () => {
             imgSrc={item.imgSrc}
             text={item.text}
             heading={item.heading}
+            bgColor={item.bgColor}
           />
         ))}
       </div>

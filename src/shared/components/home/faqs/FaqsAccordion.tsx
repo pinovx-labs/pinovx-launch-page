@@ -59,13 +59,13 @@ const FaqAccordion = ({ items }: Props) => {
               }`}
             >
               <div className="overflow-hidden">
-                <p
+                <div
                   className={`overflow-hidden transition-all text-white  duration-900 ease-in-out font-inter font-medium text-[16px]  ${
                     isOpen ? "max-h-96 opacity-100 mt-3" : "max-h-0 opacity-0"
                   }`}
                 >
                   {faq.answer}
-                </p>
+                </div>
               </div>
             </div>
           </motion.div>
