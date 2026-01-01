@@ -19,8 +19,8 @@ const HowItWorks = () => {
           viewport={{ once: true, amount: 0.3 }}
           className="flex flex-col gap-5  items-center justify-center "
         >
-          <ComponentTitle text="Process" />
-          <ComponentHeading text="How Does It Work" />
+          <ComponentTitle text="OTC Process" />
+          <ComponentHeading text="How Does it Work? Get priority support for transactions above 5,000 USDT " className="text-center" />
         </motion.div>
 
         <div className="flex  flex-col gap-5 my-4">

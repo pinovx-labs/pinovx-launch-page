@@ -5,22 +5,16 @@ export const addFaqs =
 export const removeFaqs =
   "https://res.cloudinary.com/danxk4ua5/image/upload/v1766156038/minus-cirlce_ydrclx.svg";
 export const testimonialLeft =
-
-
-"https://res.cloudinary.com/danxk4ua5/image/upload/v1767054351/arrow-circle-leftt_zef7cz.svg"
-
+  "https://res.cloudinary.com/danxk4ua5/image/upload/v1767054351/arrow-circle-leftt_zef7cz.svg";
 
 export const testimonialRight =
-
-
-"https://res.cloudinary.com/danxk4ua5/image/upload/v1767054334/arrow-circle-left_rgei4w.svg"
+  "https://res.cloudinary.com/danxk4ua5/image/upload/v1767054334/arrow-circle-left_rgei4w.svg";
 export const testimonialImg =
   "https://res.cloudinary.com/danxk4ua5/image/upload/v1766158335/Ellipse_2_1_kkrrab.svg";
 export const topQuote =
-
-"https://res.cloudinary.com/danxk4ua5/image/upload/v1767054217/tesivmhugkeuu7browpb.svg"
+  "https://res.cloudinary.com/danxk4ua5/image/upload/v1767054217/tesivmhugkeuu7browpb.svg";
 export const downQuote =
-"https://res.cloudinary.com/danxk4ua5/image/upload/v1767054217/1_fxe3xq.svg"
+  "https://res.cloudinary.com/danxk4ua5/image/upload/v1767054217/1_fxe3xq.svg";
 export const diffMoney =
   "https://res.cloudinary.com/danxk4ua5/image/upload/v1766173109/money_kfyri3.svg";
 export const diffGlobal =
@@ -38,13 +32,16 @@ export const bitcoinIcon =
 export const checkerIcon =
   "https://res.cloudinary.com/danxk4ua5/image/upload/v1766180507/shield-tick_kgfcpx.png";
 export const featureTransaction =
-  "https://res.cloudinary.com/danxk4ua5/image/upload/v1766216037/Vector_1_o7wm1s.svg";
-export const featureBuyCrypto =
-  "https://res.cloudinary.com/danxk4ua5/image/upload/v1766216068/FX_1_1_xagukt.svg";
+  "https://res.cloudinary.com/danxk4ua5/image/upload/v1767206747/Frame_2147226256_wywzxx.svg";
+export const featurePayment =
+  "https://res.cloudinary.com/danxk4ua5/image/upload/v1767206756/Rectangle_2_10_ydo4u2.png";
+
+
+  export const featureBuyCrypto =
+  "https://res.cloudinary.com/danxk4ua5/image/upload/v1767208432/FX_1_ljtr9n.png";
 export const featureSendMoney =
   "https://res.cloudinary.com/danxk4ua5/image/upload/v1766216068/FX_1_n2at79.svg";
 export const heroDevice =
   "https://res.cloudinary.com/danxk4ua5/image/upload/v1766219585/iPhone_12_Pro_Wooden_Hands_jn3yac.svg";
 export const homeLogo =
   "https://res.cloudinary.com/danxk4ua5/image/upload/v1767052613/Vector_3_ujnxp6.svg";
-

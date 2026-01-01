@@ -12,7 +12,7 @@ const ComponentHeading = ({ text, className = "" }: TextProps) => {
   return (
     <motion.h2
       variants={fadeInUp}
-      className={`font-bold font-geist text-[30px] md:text-[50px]  ${className}`}
+      className={`font-bold font-geist text-[30px] md:text-[50px]  text-[#19461D]  ${className}`}
     >
       {text}
     </motion.h2>

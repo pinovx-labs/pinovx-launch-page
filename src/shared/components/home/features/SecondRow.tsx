@@ -1,12 +1,13 @@
 "use client";
 
-import { featureBuyCrypto, featureTransaction } from "@/utils/externalMedia";
+import { featureBuyCrypto, featurePayment, featureTransaction } from "@/utils/externalMedia";
 import { CirclePlus } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
 import { motion } from "framer-motion";
 import { fadeInUp, fadeInScale, staggerContainer } from "@/utils/animation";
+import { FeatureCard } from "./FeatureCard";
 
 export const SecondRow = () => {
   return (
@@ -17,7 +18,7 @@ export const SecondRow = () => {
       viewport={{ once: true }}
       className="flex flex-col md:flex-row  w-full  gap-7 justify-center md:justify-start "
     >
-      <div className="w-full md:w-7/12  flex flex-col gap-2 md:gap-8 relative bg-[#F2FDF3] h-[500px] justify-between  ">
+      {/* <div className="w-full md:w-7/12  flex flex-col gap-2 md:gap-8 relative bg-[#F2FDF3] h-[500px] justify-between  ">
         <div className="flex flex-col  mt-2  md:mt-8 items-start justify-between gap-5 p-10 ">
           <motion.div variants={fadeInUp} className="flex flex-col  gap-5  ">
             <h3 className="text-[#02CE13]   font-geist  font-bold  text-2xl md:text-3xl ">
@@ -117,7 +118,29 @@ export const SecondRow = () => {
             priority
           />
         </motion.div>
-      </div>
+      </div> */}
+
+      <FeatureCard
+        className="md:w-7/12"
+        title="Smart Rates"
+        description="View live exchange rates and convert between fiat and crypto with confidence."
+        imageSrc={featureTransaction}
+        backgroundColor="bg-[#02C112]"
+        titleColor="#ffffff"
+        linkText="View Rates"
+        linkColor="#ffffff"
+      />
+
+      <FeatureCard
+        className="md:w-5/12"
+        title="Buy Crypto"
+        description="On-ramp In seconds. Pay your way - with cards, Interac e-Transfer, PayID."
+        imageSrc={featurePayment}
+        backgroundColor="bg-[linear-gradient(to_bottom,#02CE13_0%,#02CE13_20%,#019B10_60%,#01680A_100%)]"
+        titleColor="#ffffff"
+        linkColor="#ffffff"
+        linkText="Access OTC"
+      />
     </motion.div>
   );
 };
