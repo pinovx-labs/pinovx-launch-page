@@ -5,6 +5,7 @@ import { inter, montserrat, geist, roboto } from "./fonts";
 import Footer from "@/shared/components/footer/Footer";
 import Header from "@/shared/components/header/header";
 import ScrollProgressIndicator from "@/utils/ScrollProgress";
+import { Toaster } from "react-hot-toast";
 
 
 export const metadata: Metadata = {
@@ -66,7 +67,10 @@ export default function RootLayout({
       >
         <Providers>
           <Header />
+
           {children}
+                    <Toaster position="top-center" />
+
           <Footer />
           <ScrollProgressIndicator />
         </Providers>

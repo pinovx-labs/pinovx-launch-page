@@ -6,6 +6,7 @@ type ButtonProps = {
   onClick?: () => void;
   className?: string;
   type?: "button" | "submit" | "reset";
+  disabled?:boolean
 };
 
 const fontMap = {
@@ -19,10 +20,11 @@ const Button = ({
   font = "inter",
   onClick,
   className,
-  type = "button",
+  type = "button", disabled
 }: ButtonProps) => {
   return (
     <button
+    disabled={disabled}
       type={type}
       onClick={onClick}
       className={clsx(

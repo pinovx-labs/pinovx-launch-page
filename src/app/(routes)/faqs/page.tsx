@@ -3,14 +3,14 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import Button from "../../button/Button";
-import FaqAccordion from "./FaqsAccordion";
-import { faqs } from "../../../../../public/assets/data/faqs";
 import { fadeInUp, staggerContainer } from "@/utils/animation";
+import { faqs } from "../../../../public/assets/data/faqs";
+import FaqAccordion from "@/shared/components/home/faqs/FaqsAccordion";
+import Button from "@/shared/components/button/Button";
 
 const Faqs = () => {
   return (
-    <main className="w-full mt-10   ">
+    <main className="w-full mt-24 md:mt-30   ">
       <section className="container mx-auto px-4 "  id="faqs" >
         <motion.div 
           className="w-full flex flex-col md:flex-row gap-7 "

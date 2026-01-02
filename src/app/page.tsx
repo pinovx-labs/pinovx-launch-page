@@ -13,8 +13,8 @@ const page = () => {
       <Feature />
       <HowItWorks />
       <Difference />
-      <Faqs />
-      <TestimonialsSection />
+      <TestimonialsSection />      <Faqs />
+
     </div>
   );
 };

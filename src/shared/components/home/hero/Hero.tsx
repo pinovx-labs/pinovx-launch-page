@@ -4,6 +4,7 @@ import Button from "../../button/Button";
 import { motion } from "framer-motion";
 import { fadeInScale, fadeInUp, staggerContainer } from "@/utils/animation";
 import { sponsors } from "../../../../../public/assets/data/sponsors";
+import WaitlistForm from "./WaitlistForm";
 
 export default function HeroSection() {
   return (
@@ -50,7 +51,7 @@ export default function HeroSection() {
                   goes live.
                 </motion.p>
 
-                <motion.div
+                {/* <motion.div
                   variants={fadeInScale}
                   className="flex px-4 md:px-0 flex-col md:flex-row gap-5 mt-2 items-center w-full max-w-[680px]"
                 >
@@ -64,7 +65,12 @@ export default function HeroSection() {
                     type="button"
                     className="w-full md:w-auto"
                   />
-                </motion.div>
+                </motion.div> */}
+
+
+  <WaitlistForm />
+
+
               </div>
             </motion.div>
           </motion.div>
