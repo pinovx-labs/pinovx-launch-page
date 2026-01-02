@@ -6,7 +6,7 @@ export const useWaitlist = () => {
   return useMutation<WaitlistResponse, any, WaitlistPayload>({
     mutationFn: async (payload) => {
       const { data } = await api.post(
-        "/api-docs#/Waitlist/WaitlistController_addToWaitlist",
+        "/v1/waitlist",
         payload
       );
       return data;

@@ -20,6 +20,7 @@ interface CardProps {
   className?: string;
   otcBtn?: boolean;
   showIconContainer?: boolean;
+  maxWidth:number
 }
 
 const Card = ({
@@ -34,7 +35,7 @@ const Card = ({
   imageAlt = " icon",
   className = "",
   otcBtn = false,
-  showIconContainer = true,
+  showIconContainer = true, maxWidth
 }: CardProps) => {
   const shouldShowIconContainer = showIconContainer && imageSrc;
 
@@ -88,7 +89,7 @@ const Card = ({
 
       <motion.span
         variants={fadeInUp}
-        className="font-inter text-xl leading-[35px] max-w-[434px] text-white "
+        className={`font-inter text-xl leading-[35px] max-w-[${maxWidth}px] text-white `}
       >
         {spanText}
       </motion.span>

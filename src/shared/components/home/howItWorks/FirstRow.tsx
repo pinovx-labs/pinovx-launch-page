@@ -25,9 +25,13 @@ const FirstRow = () => {
         iconBgColor="#19451D"
         hoverIconBgColor="#28D536"
         className=""
+                maxWidth={378}
+
       />
 
       <Card
+              maxWidth={434}
+
         bgColor="#19461D"
         imageSrc={bitcoinIcon}
         pText={"Seek"}

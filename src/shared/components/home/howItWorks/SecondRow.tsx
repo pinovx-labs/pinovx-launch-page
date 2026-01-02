@@ -64,18 +64,22 @@ const SecondRow = () => {
         iconBgColor="#28D536"
         hoverIconBgColor="#28D536"
         className="w-[370px]   md:w-7/12"
+                maxWidth={516}
+
+
       />
 
       <Card
         bgColor="bg-[linear-gradient(to_bottom,#02CE13_0%,#02CE13_20%,#019B10_60%,#01680A_100%)]"
-        pText={"Seal"}
+        pText={"Settle"}
         spanText="OTC team will receive your order and process it."
         iconBgColor="#28D536"
         hoverIconBgColor="#28D536"
- className="w-[370px] md:w-5/12 bg-[linear-gradient(to_bottom,#02CE13_0%,#02CE13_20%,#019B10_60%,#01680A_100%)]"        otcBtn={true}
-        showIconContainer={false}
-      />
+        className="w-[370px] md:w-5/12 bg-[linear-gradient(to_bottom,#02CE13_0%,#02CE13_20%,#019B10_60%,#01680A_100%)]"
+        otcBtn={true}
+        showIconContainer={false}         maxWidth={408}
 
+      />
     </motion.div>
   );
 };
