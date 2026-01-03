@@ -10,30 +10,35 @@ export default function WaitlistForm() {
   const [email, setEmail] = useState("");
   const [showModal, setShowModal] = useState(false);
 
-  const { mutate, isPending } = useWaitlist();
+  const { mutateAsync, isPending } = useWaitlist();
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (!email) {
       toast.error("Please enter your email");
       return;
     }
 
-    mutate(
-      { email },
+    // Use toast.promise for a better UX
+    await toast.promise(
+      mutateAsync({ email }), // mutateAsync returns a promise
       {
-        onSuccess: (data) => {
-          toast.success(data.message || "Added to waitlist!");
+        loading: 'Joining waitlist...',
+        success: (data) => {
+          // Only runs on actual success
           setShowModal(true);
           setEmail("");
+          return data.message || "Added to waitlist!";
         },
-        onError: (error: any) => {
-          toast.error(
-            error?.response?.data?.message ||
-              "Something went wrong. Please try again."
-          );
+        error: (err) => {
+          // Only runs on actual error
+          const errorMessage = err?.response?.data?.message || "Something went wrong.";
+          return errorMessage;
         },
       }
-    );
+    ).catch(() => {
+      // Catch empty to prevent unhandled promise rejection in console
+      // The error is already handled by toast.promise
+    });
   };
 
   return (

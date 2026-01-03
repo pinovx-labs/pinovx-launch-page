@@ -51,30 +51,10 @@ export default function HeroSection() {
                   goes live.
                 </motion.p>
 
-                {/* <motion.div
-                  variants={fadeInScale}
-                  className="flex px-4 md:px-0 flex-col md:flex-row gap-5 mt-2 items-center w-full max-w-[680px]"
-                >
-                  <input
-                    type="email"
-                    placeholder="Enter email address"
-                    className="w-full md:w-[380px]  rounded-lg   py-2.5 px-4 bg-white/95 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500"
-                  />
-                  <Button
-                    text="Join Our Waitlist"
-                    type="button"
-                    className="w-full md:w-auto"
-                  />
-                </motion.div> */}
-
-
-  <WaitlistForm />
-
-
+                <WaitlistForm />
               </div>
             </motion.div>
           </motion.div>
-
         </div>
       </section>
       <div className="flex justify-center items-center flex-wrap bg-[#F8F8F8] flex-col gap-6 py-10 ">
